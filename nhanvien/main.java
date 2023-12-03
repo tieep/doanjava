@@ -1,11 +1,13 @@
-package doanoop;
+package nhanvien;
 
 
 import java.util.Scanner;
 
+
 public class main {
     public static void main(String[] args) {
         NhanVienList danhSachNV = new NhanVienList(100);
+        
         Scanner sc = new Scanner(System.in);
         boolean running = true; // Biến điều kiện để chạy menu
         while (running) {
@@ -40,6 +42,10 @@ public class main {
                     System.out.println("Nhập thông tin nhân viên mới:");
                     System.out.println("Mã nhân viên: ");
                     String maNV = sc.nextLine();
+                    while (!danhSachNV.isUniqueID(maNV)) {
+                        System.out.println("Mã nhân viên đã tồn tại. Vui lòng nhập lại: ");
+                        maNV = sc.nextLine();
+                    }
                     System.out.println("Họ nhan vien: ");
                     String hoNV = sc.nextLine();
                     System.out.println("Tên nhân viên");

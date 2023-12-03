@@ -1,4 +1,4 @@
-package doanoop;
+package nhanvien;
 
 public class NhanVien {
     private static int soLuongNhanVien = 0;   // thuộc tính static
